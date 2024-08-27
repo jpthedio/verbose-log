@@ -18,12 +18,14 @@ To integrate `verboseLog` in a Webflow project, add the following script to the 
 #### Using the Full Version
 
 ```html
+<!-- Verbose Log by JP Dionisio -->
 <script async src="https://cdn.jsdelivr.net/gh/jpthedio/verbose-log@main/verbose-log.js"></script>
 ```
 
 #### Using the Minified Version
 
 ```html
+<!-- Verbose Log by JP Dionisio -->
 <script async src="https://cdn.jsdelivr.net/gh/jpthedio/verbose-log@main/verbose-log.min.js"></script>
 ```
 
