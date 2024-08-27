@@ -57,13 +57,13 @@ verboseLog('Debugging data: user ID = 12345.', 'debug');
 
 ### Log Levels
 
-| Level       | Description                                                         | Visibility                 |
-|-------------|---------------------------------------------------------------------|----------------------------|
-| `critical`  | Used for critical issues that need immediate attention.             | Staging and production.    |
-| `error`     | Indicates errors that have occurred but do not stop the website.    | Staging and production.    |
-| `warn`      | Warnings about potential issues that should be monitored.           | Staging only.              |
-| `info`      | General information about website state or operations.              | Staging only.              |
-| `debug`     | Detailed debugging information for development and troubleshooting. | Staging only.              |
+| Level       | Description                                                         | Visibility                 | Default Emoji  |
+|-------------|---------------------------------------------------------------------|----------------------------|----------------|
+| `critical`  | Used for critical issues that need immediate attention.             | Staging and production.    | 🔴 (Red circle) |
+| `error`     | Indicates errors that have occurred but do not stop the website.    | Staging and production.    | 🟠 (Orange circle) |
+| `warn`      | Warnings about potential issues that should be monitored.           | Staging only.              | 🟡 (Yellow circle) |
+| `debug`     | Detailed debugging information for development and troubleshooting. | Staging only.              | 🟢 (Green circle) |
+| `info`      | General information about website state or operations.              | Staging only.              | 🔵 (Blue circle) |
 
 ### Configuration
 
