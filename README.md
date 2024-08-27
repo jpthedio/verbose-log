@@ -45,8 +45,8 @@ This guarantees that the script is fully loaded and ready to use before any logg
 <!-- Custom code by you -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-// Your verboseLog calls here
-verboseLog('This is a log message with async script loading.', 'info');
+  // Your verboseLog calls here
+  verboseLog('This is a log message with async script loading.', 'info');
 });
 </script>
 ```
@@ -71,9 +71,9 @@ The function will be available globally.
 <!-- Verbose Log custom options -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    // Example: Adding a custom domain and enabling logging
-    verboseLog.stagingDomains.push('beta.yourdomain.com');
-    verboseLog.isEnabled = true;
+  // Example: Adding a custom domain and enabling logging
+  verboseLog.stagingDomains.push('beta.yourdomain.com');
+  verboseLog.isEnabled = true;
 });
 </script>
 ```
