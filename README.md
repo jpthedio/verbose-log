@@ -13,27 +13,27 @@
 
 ### For Webflow Projects
 
+#### Using the Full Version
+
 To integrate `verboseLog` in a Webflow project, add the following script to the **Site Settings > Custom Code > Header** section and make sure to load it asynchronously:
 
 ```html
 <script async src="https://cdn.jsdelivr.net/gh/jpthedio/verbose-log@main/verbose-log.js"></script>
 ```
 
-# For Other Projects
-
-You can also use this script in other web projects by including the same script tag in your HTML file:
+### Using the Minified Version
 
 ```html
-<script async src="https://cdn.jsdelivr.net/gh/jpthedio/verbose-log@main/verbose-log.js"></script>
+<script async src="https://cdn.jsdelivr.net/gh/jpthedio/verbose-log@main/verbose-log.min.js"></script>
 ```
 
-# Usage
+## Usage
 
-## Basic Setup
+### Basic Setup
 
 To use verboseLog, simply include the script in your HTML file or Webflow Site Settings. The function will be available globally.
 
-## Example Usage
+### Example Usage
 
 ```html
 // Set custom staging domains globally
@@ -55,18 +55,22 @@ verboseLog('Application initialized successfully.', 'info', '✅');
 verboseLog('Debugging data: user ID = 12345.', 'debug');
 ```
 
-## Log Levels
+### Log Levels
 
-•	critical: Always visible, even in production.
-•	error: Visible in both staging and production environments.
-•	warn: Visible in staging, suppressed in production.
-•	info: General information, visible in staging, typically suppressed in production.
-•	debug: Detailed technical information, visible only in staging environments.
+| Level       | Description                                                         | Visibility                 |
+|-------------|---------------------------------------------------------------------|----------------------------|
+| `critical`  | Used for critical issues that need immediate attention.             | Staging and production.    |
+| `error`     | Indicates errors that have occurred but do not stop the website.    | Staging and production.    |
+| `warn`      | Warnings about potential issues that should be monitored.           | Staging only.              |
+| `info`      | General information about website state or operations.              | Staging only.              |
+| `debug`     | Detailed debugging information for development and troubleshooting. | Staging only.              |
 
-## Configuration
+### Configuration
 
-•	Custom Staging Domains: Add domains to verboseLog.stagingDomains to treat them as staging environments.
-•	Enable/Disable Logging: Use verboseLog.isEnabled to toggle logging on or off.
+•	Custom Staging Domains: Add domains to verboseLog.stagingDomains to treat them as staging environments. 
+  •	Default staging domain is 'webflow.io'
+•	Enable/Disable Logging: Use verboseLog.isEnabled to toggle logging on or off. 
+  •	Logging is enabled true by default.
 
 ```html
 // Example: Adding a custom domain and enabling logging
@@ -74,20 +78,26 @@ verboseLog.stagingDomains.push('beta.yourdomain.com');
 verboseLog.isEnabled = true;
 ```
 
-# Versioning
+## Versioning
 You can link to specific versions of the script using tags:
+
+### Using the Full Version
 ```html
 <script async src="https://cdn.jsdelivr.net/gh/jpthedio/verbose-log@v1.0.0/verbose-log.js"></script>
 ```
+### Using the Minified Version
+```html
+<script async src="https://cdn.jsdelivr.net/gh/jpthedio/verbose-log@v1.0.0/verbose-log.min.js"></script>
+```
 
-# License
+## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-# Contributing
+## Contributing
 
 Feel free to open issues or submit pull requests to improve the functionality of verboseLog.
 
-# Author
+## Author
 
 Created by JP Dionisio.
