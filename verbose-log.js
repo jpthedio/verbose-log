@@ -23,7 +23,7 @@ if (!window.verboseLog) {
     /**
      * Function to log messages to the console based on the environment and log level.
      * In a staging environment (URLs containing any of the specified staging domains), logs can be verbose.
-     * In a production environment, only critical logs are shown.
+     * In a production environment, only critical and error logs are shown.
      *
      * @param {string} message - The message to log.
      * @param {string} [level='info'] - The log level ('critical', 'error', 'warn', 'info', 'debug').
@@ -33,23 +33,26 @@ if (!window.verboseLog) {
         // Check if logging is turned off
         if (!window.verboseLog.isEnabled) return;
 
-        // Define log levels with corresponding numeric values and default emoji
+        // Define log levels with corresponding default emoji and production visibility
         const logLevels = {
-            'critical': { value: 1, emoji: '🔴' },  // Red circle
-            'error': { value: 2, emoji: '🟠' },     // Orange circle
-            'warn': { value: 3, emoji: '🟡' },      // Yellow circle
-            'debug': { value: 4, emoji: '🟢' },     // Green circle
-            'info': { value: 5, emoji: '🔵' },      // Blue circle
+            'critical': { emoji: '🔴', showInProd: true },  // Red circle
+            'error': { emoji: '🟠', showInProd: true },     // Orange circle
+            'warn': { emoji: '🟡', showInProd: false },     // Yellow circle
+            'debug': { emoji: '🟢', showInProd: false },    // Green circle
+            'info': { emoji: '🔵', showInProd: false },     // Blue circle
         };
 
-        // Determine the current log level based on the domain
-        const currentLevel = isStagingDomain() ? logLevels['debug'].value : logLevels['critical'].value;
+        // Determine if the current environment is production
+        const isProduction = !isStagingDomain();
+
+        // Get the log level configuration
+        const logConfig = logLevels[level];
 
         // Determine the emoji to use: custom emoji if provided, otherwise default emoji
-        const emoji = customEmoji || logLevels[level].emoji;
+        const emoji = customEmoji || logConfig.emoji;
 
-        // Log the message if the level is less than or equal to the current level
-        if (logLevels[level].value <= currentLevel) {
+        // Log the message based on the environment and log level
+        if (!isProduction || logConfig.showInProd) {
             console.log(`${emoji} [${level.toUpperCase()}]: ${message}`);
         }
     }
