@@ -41,18 +41,33 @@ verboseLog.stagingDomains = ['staging.yourdomain.com', 'preview.yourdomain.com']
 
 // Turn off logging
 verboseLog.isEnabled = false;
-verboseLog('This message will not appear.', 'info');
+verboseLog('This message will not appear.', 'info'); 
+// No output, logging is disabled
 
 // Turn on logging
 verboseLog.isEnabled = true;
-verboseLog('This message will appear.', 'info');
+verboseLog('This message will appear.', 'info'); 
+// 🔵 [INFO]: This message will appear.
 
 // Log messages with different levels
-verboseLog('A critical error occurred!', 'critical');
-verboseLog('An error was encountered while processing your request.', 'error');
-verboseLog('This action is deprecated.', 'warn');
-verboseLog('Application initialized successfully.', 'info', '✅');
-verboseLog('Debugging data: user ID = 12345.', 'debug');
+verboseLog('A critical error occurred!', 'critical'); 
+// 🔴 [CRITICAL]: A critical error occurred!
+
+verboseLog('An error was encountered while processing your request.', 'error'); 
+// 🟠 [ERROR]: An error was encountered while processing your request.
+
+verboseLog('This action is deprecated.', 'warn'); 
+// 🟡 [WARN]: This action is deprecated.
+
+verboseLog('Application initialized successfully.', 'info', '✅'); 
+// ✅ [INFO]: Application initialized successfully.
+
+verboseLog('Debugging data: user ID = 12345.', 'debug'); 
+// 🟢 [DEBUG]: Debugging data: user ID = 12345.
+
+// Usage with only the first parameter given
+verboseLog('This is a simple message'); 
+// 🔵 [INFO]: This is a simple message
 ```
 
 ### Log Levels
