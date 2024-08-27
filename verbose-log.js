@@ -38,8 +38,8 @@ if (!window.verboseLog) {
             'critical': { value: 1, emoji: '🔴' },  // Red circle
             'error': { value: 2, emoji: '🟠' },     // Orange circle
             'warn': { value: 3, emoji: '🟡' },      // Yellow circle
-            'info': { value: 4, emoji: '🔵' },      // Blue circle
-            'debug': { value: 5, emoji: '🟢' },     // Green circle
+            'debug': { value: 4, emoji: '🟢' },     // Green circle
+            'info': { value: 5, emoji: '🔵' },      // Blue circle
         };
 
         // Determine the current log level based on the domain
