@@ -7,7 +7,7 @@ Without advanced logging tools, critical details can slip through the cracks, le
 
 **verboseLog** is built to solve this.
 
-**Verbose Log** is a lightweight, yet powerful, JavaScript utility tailored for enhanced logging in Webflow projects. 
+**Verbose Log** is a lightweight and powerful JavaScript utility tailored for enhanced logging in Webflow projects. 
 It offers environment-based log levels (🔴 critical, 🟠 error, 🟡 warn, 🟢 debug, 🔵 info), custom staging domain support, 
 and flexible toggling options. While optimized for Webflow, it’s versatile enough to be integrated into any web project.
 
@@ -24,7 +24,7 @@ and flexible toggling options. While optimized for Webflow, it’s versatile eno
 
 To integrate `verboseLog` in a Webflow project: 
 - Go to the Webflow project's **Settings > Custom code > Head code**
-- Copy the code block bellow and paste it in the **Head code** 
+- Copy the code block below and paste it in the **Head code** 
 
 ```html
 <!-- Verbose Log by JP Dionisio -->
@@ -36,27 +36,20 @@ To integrate `verboseLog` in a Webflow project:
 If you choose to load the script asynchronously `async` or defer its execution `defer`:
 - ensure that all verboseLog calls are wrapped inside a DOMContentLoaded event listener.
 
-This guarantees that the script is fully loaded and ready to use before any logging takes place.
-
 ```html
 <!-- Verbose Log by JP Dionisio -->
 <script async src="https://cdn.jsdelivr.net/gh/jpthedio/verbose-log@main/verbose-log.js"></script>
 
 <!-- Custom code by you -->
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  // Your verboseLog calls here
-  verboseLog('This is a log message with async script loading.', 'info');
-});
+  document.addEventListener("DOMContentLoaded", function() {
+    // Your verboseLog calls here
+    verboseLog('This is a log message with async script loading.', 'info');
+  });
 </script>
 ```
 
 ## Usage in custom code
-
-### Basic Setup
-
-To use verboseLog, simply include the script in your Webflow Site Settings Head code or HTML file. 
-The function will be available globally.
 
 ### Configuration
 
@@ -68,13 +61,14 @@ The function will be available globally.
 ```html
 <!-- Verbose Log by JP Dionisio -->
 <script async src="https://cdn.jsdelivr.net/gh/jpthedio/verbose-log@main/verbose-log.js"></script>
+
 <!-- Verbose Log custom options -->
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  // Example: Adding a custom domain and enabling logging
-  verboseLog.stagingDomains.push('beta.yourdomain.com');
-  verboseLog.isEnabled = true;
-});
+  document.addEventListener("DOMContentLoaded", function() {
+    // Example: Adding a custom domain and enabling logging
+    verboseLog.stagingDomains.push('beta.yourdomain.com');
+    verboseLog.isEnabled = true;
+  });
 </script>
 ```
 
@@ -93,40 +87,40 @@ document.addEventListener("DOMContentLoaded", function() {
 ```html
 <!-- Verbose Log Examples Usage -->
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  // Set custom staging domains globally
-  verboseLog.stagingDomains = ['staging.yourdomain.com', 'preview.yourdomain.com'];
+  document.addEventListener("DOMContentLoaded", function() {
+    // Set custom staging domains globally
+    verboseLog.stagingDomains = ['staging.yourdomain.com', 'preview.yourdomain.com'];
 
-  // Turn off logging
-  verboseLog.isEnabled = false;
-  verboseLog('This message will not appear.', 'info'); 
-  // No output, logging is disabled
+    // Turn off logging
+    verboseLog.isEnabled = false;
+    verboseLog('This message will not appear.', 'info'); 
+    // No output, logging is disabled
 
-  // Turn on logging
-  verboseLog.isEnabled = true;
-  verboseLog('This message will appear.', 'info'); 
-  // 🔵 [INFO]: This message will appear.
+    // Turn on logging
+    verboseLog.isEnabled = true;
+    verboseLog('This message will appear.', 'info'); 
+    // 🔵 [INFO]: This message will appear.
 
-  // Log messages with different levels
-  verboseLog('A critical error occurred!', 'critical'); 
-  // 🔴 [CRITICAL]: A critical error occurred!
+    // Log messages with different levels
+    verboseLog('A critical error occurred!', 'critical'); 
+    // 🔴 [CRITICAL]: A critical error occurred!
 
-  verboseLog('An error was encountered while processing your request.', 'error'); 
-  // 🟠 [ERROR]: An error was encountered while processing your request.
+    verboseLog('An error was encountered while processing your request.', 'error'); 
+    // 🟠 [ERROR]: An error was encountered while processing your request.
 
-  verboseLog('This action is deprecated.', 'warn'); 
-  // 🟡 [WARN]: This action is deprecated.
+    verboseLog('This action is deprecated.', 'warn'); 
+    // 🟡 [WARN]: This action is deprecated.
 
-  verboseLog('Application initialized successfully.', 'info', '✅'); 
-  // ✅ [INFO]: Application initialized successfully.
+    verboseLog('Application initialized successfully.', 'info', '✅'); 
+    // ✅ [INFO]: Application initialized successfully.
 
-  verboseLog('Debugging data: user ID = 12345.', 'debug'); 
-  // 🟢 [DEBUG]: Debugging data: user ID = 12345.
+    verboseLog('Debugging data: user ID = 12345.', 'debug'); 
+    // 🟢 [DEBUG]: Debugging data: user ID = 12345.
 
-  // Usage with only the first parameter given
-  verboseLog('This is a simple message'); 
-  // 🔵 [INFO]: This is a simple message
-});
+    // Usage with only the first parameter given
+    verboseLog('This is a simple message'); 
+    // 🔵 [INFO]: This is a simple message
+  });
 </script>
 ```
 
