@@ -98,10 +98,12 @@ You can link to specific versions of the script using tags:
 
 ### Using the Full Version
 ```html
+<!-- Verbose Log by JP Dionisio -->
 <script async src="https://cdn.jsdelivr.net/gh/jpthedio/verbose-log@v1.0.0/verbose-log.js"></script>
 ```
 ### Using the Minified Version
 ```html
+<!-- Verbose Log by JP Dionisio -->
 <script async src="https://cdn.jsdelivr.net/gh/jpthedio/verbose-log@v1.0.0/verbose-log.min.js"></script>
 ```
 
