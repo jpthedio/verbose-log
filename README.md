@@ -1,5 +1,13 @@
 # verbose-log
 
+**Is Your Debugging Process Holding Back Your Webflow Enterprise Projects?**
+
+Managing large codebases in professional projects can be overwhelming, especially when debugging with standard console logs.
+
+Without advanced logging tools, it’s easy to miss critical details, leading to inefficient debugging and messy code management.
+
+verboseLog is built to solve this.
+
 **Verbose Log** is a lightweight JavaScript utility for enhanced logging in Webflow projects, offering environment-based log levels (`critical`, `error`, `warn`, `debug`, `info`), custom staging domain support, and toggling options. Optimized for Webflow but versatile enough for any web project.
 
 ## Features
