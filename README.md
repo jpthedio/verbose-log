@@ -85,7 +85,7 @@ If you choose to load the script asynchronously `async` or defer its execution `
 ### Example Usage
 
 ```html
-<!-- Verbose Log Examples Usage -->
+<!-- Verbose Log examples usage -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     // Set custom staging domains globally
