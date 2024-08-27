@@ -13,15 +13,15 @@
 
 ### For Webflow Projects
 
-#### Using the Full Version
-
 To integrate `verboseLog` in a Webflow project, add the following script to the **Site Settings > Custom Code > Header** section and make sure to load it asynchronously:
+
+#### Using the Full Version
 
 ```html
 <script async src="https://cdn.jsdelivr.net/gh/jpthedio/verbose-log@main/verbose-log.js"></script>
 ```
 
-### Using the Minified Version
+#### Using the Minified Version
 
 ```html
 <script async src="https://cdn.jsdelivr.net/gh/jpthedio/verbose-log@main/verbose-log.min.js"></script>
