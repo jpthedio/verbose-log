@@ -1,12 +1,12 @@
 # verbose-log
 
-**Verbose Log** is a lightweight JavaScript utility for enhanced logging in Webflow projects, offering environment-based log levels (`critical`, `error`, `warn`, `info`, `debug`), custom staging domain support, and toggling options. Optimized for Webflow but versatile enough for any web project.
+**Verbose Log** is a lightweight JavaScript utility for enhanced logging in Webflow projects, offering environment-based log levels (`critical`, `error`, `warn`, `debug`, `info`), custom staging domain support, and toggling options. Optimized for Webflow but versatile enough for any web project.
 
 ## Features
 
 - **Environment-Based Logging**: Automatically adjust log verbosity based on whether the current domain is staging or production.
 - **Custom Staging Domains**: Easily configure which domains should be treated as staging environments.
-- **Logging Levels**: Support for `critical`, `error`, `warn`, `info`, and `debug` levels.
+- **Logging Levels**: Support for `critical`, `error`, `warn`, `debug`, and `info` levels.
 - **Toggle Logging**: Globally enable or disable logging as needed.
 
 ## Installation
