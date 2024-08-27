@@ -39,9 +39,7 @@ if (!window.verboseLog) {
 
         if (!isProduction || logConfig.showInProd) {
             console.log(`${emoji} [${level.toUpperCase()}]: ${logFn === console.table ? 'Table data logged below:' : data}`);
-            if (logFn === console.table) {
-                logFn(data);
-            }
+            logFn(data);
         }
     }
 
