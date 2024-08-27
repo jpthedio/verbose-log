@@ -28,17 +28,17 @@ To integrate `verboseLog` in a Webflow project:
 
 ```html
 <!-- Verbose Log by JP Dionisio -->
-<script async src="https://cdn.jsdelivr.net/gh/jpthedio/verbose-log@main/verbose-log.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/jpthedio/verbose-log@main/verbose-log.min.js"></script>
 ```
 
-#### Important Note for Async or Defer Loading
+#### Important Note for Defer Loading
 
-If you choose to load the script asynchronously `async` or defer its execution `defer`:
+If you choose to load the script defer its execution `defer`:
 - ensure that all verboseLog calls are wrapped inside a DOMContentLoaded event listener.
 
 ```html
 <!-- Verbose Log by JP Dionisio -->
-<script async src="https://cdn.jsdelivr.net/gh/jpthedio/verbose-log@main/verbose-log.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/jpthedio/verbose-log@main/verbose-log.js"></script>
 
 <!-- Custom code by you -->
 <script>
@@ -60,7 +60,7 @@ If you choose to load the script asynchronously `async` or defer its execution `
 
 ```html
 <!-- Verbose Log by JP Dionisio -->
-<script async src="https://cdn.jsdelivr.net/gh/jpthedio/verbose-log@main/verbose-log.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/jpthedio/verbose-log@main/verbose-log.js"></script>
 
 <!-- Verbose Log custom options -->
 <script>
