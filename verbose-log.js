@@ -38,8 +38,12 @@ if (!window.verboseLog) {
         const emoji = customEmoji || logConfig.emoji;
 
         if (!isProduction || logConfig.showInProd) {
-            console.log(`${emoji} [${level.toUpperCase()}]: ${logFn === console.table ? 'Table data logged below:' : data}`);
-            logFn(data);
+            console.log(`${emoji} [${level.toUpperCase()}]: ${typeof data !== 'string' ? 'Data logged below:' : data}`);
+    
+            // Run logFn only if data is not a string
+            if (typeof data !== 'string') {
+                logFn(data);
+            }
         }
     }
 
