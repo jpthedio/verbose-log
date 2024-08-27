@@ -90,4 +90,4 @@ Feel free to open issues or submit pull requests to improve the functionality of
 
 # Author
 
-Created by JP Thedio.
+Created by JP Dionisio.
